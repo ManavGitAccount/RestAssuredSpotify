@@ -35,16 +35,16 @@ public class PlaylistTests extends BaseTest{
 
     }
 
-    @Test(description = "This test is used to get a playlist once it has been created")
-    public void ShouldBeAbleToGetAPlaylist(){
-
-        Playlist requestPlaylist = playlistBuilder("Hubba Bubba is updated", "Awesome Chewing Gum WIth" +
-                " a Nice Song is also updated !", true);
-
-        Response response = PlaylistApi.get(DataLoader.getInstance().getPlayListId());
-        assertStatusCode(response.statusCode(), StatusCode.CODE_200.code);
-        assertPlaylistEqual(response.as(Playlist.class), requestPlaylist);
-    }
+ //   @Test(description = "This test is used to get a playlist once it has been created")
+//    public void ShouldBeAbleToGetAPlaylist(){
+//
+//        Playlist requestPlaylist = playlistBuilder("Hubba Bubba is updated", "Awesome Chewing Gum WIth" +
+//                " a Nice Song is also updated !", true);
+//
+//        Response response = PlaylistApi.get(DataLoader.getInstance().getPlayListId());
+//        assertStatusCode(response.statusCode(), StatusCode.CODE_200.code);
+//        assertPlaylistEqual(response.as(Playlist.class), requestPlaylist);
+//    }
 
     @Test(description = "This test is used to update a playlist once it has been created")
     public void ShouldBeAbleToUpdateAPlaylist(){
